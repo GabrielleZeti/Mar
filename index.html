@@ -44,10 +44,22 @@
         .petal5 {
             transform: rotate(300deg);
         }
+
+        /* Agregar el tallo verde */
+        .stem {
+            background-color: green;
+            width: 20px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body>
     <div class="flower">
+        <div class="stem"></div> <!-- Agregar el tallo aquí -->
         <div class="petal petal1"></div>
         <div class="petal petal2"></div>
         <div class="petal petal3"></div>
