@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flor Amarilla</title>
     <style>
+        .flower-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
         .flower {
             width: 0;
             height: 0;
@@ -51,20 +57,22 @@
             width: 20px;
             height: 100px;
             position: absolute;
-            bottom: 0;
+            bottom: -10px; /* Ajustar la posición para que el tallo esté debajo */
             left: 50%;
             transform: translateX(-50%);
         }
     </style>
 </head>
 <body>
-    <div class="flower">
+    <div class="flower-container">
+        <div class="flower">
+            <div class="petal petal1"></div>
+            <div class="petal petal2"></div>
+            <div class="petal petal3"></div>
+            <div class="petal petal4"></div>
+            <div class="petal petal5"></div>
+        </div>
         <div class="stem"></div> <!-- Agregar el tallo aquí -->
-        <div class="petal petal1"></div>
-        <div class="petal petal2"></div>
-        <div class="petal petal3"></div>
-        <div class="petal petal4"></div>
-        <div class="petal petal5"></div>
     </div>
 </body>
 </html>
