@@ -1,43 +1,58 @@
-<HTML>
-   <HEAD>
-      <TITLE>Flor</TITLE>
-   </HEAD>
-   <BODY>
-      
-      import turtle as t
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla</title>
+    <style>
+        .flower {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid yellow;
+            border-radius: 50px;
+            position: relative;
+        }
 
-# Configuración inicial
-t.speed(0)
-t.bgcolor("white")
+        .petal {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 80px solid yellow;
+            border-radius: 50px;
+            position: absolute;
+        }
 
-# Función para dibujar un pétalo
-def dibujar_petalo():
-    t.color("yellow")
-    t.begin_fill()
-    t.circle(100, 60)
-    t.left(120)
-    t.circle(100, 60)
-    t.end_fill()
+        .petal1 {
+            transform: rotate(60deg);
+        }
 
-# Dibujar el centro de la flor
-t.penup()
-t.goto(0, -100)
-t.pendown()
-t.color("yellow")
-t.begin_fill()
-t.circle(100)
-t.end_fill()
+        .petal2 {
+            transform: rotate(120deg);
+        }
 
-# Dibujar los pétalos
-for _ in range(6):
-    dibujar_petalo()
-    t.left(60)
+        .petal3 {
+            transform: rotate(180deg);
+        }
 
-# Ocultar la tortuga
-t.hideturtle()
+        .petal4 {
+            transform: rotate(240deg);
+        }
 
-# Cerrar la ventana al hacer clic
-t.exitonclick()
-      
-   </BODY>
-</HTML>
+        .petal5 {
+            transform: rotate(300deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">
+        <div class="petal petal1"></div>
+        <div class="petal petal2"></div>
+        <div class="petal petal3"></div>
+        <div class="petal petal4"></div>
+        <div class="petal petal5"></div>
+    </div>
+</body>
+</html>
