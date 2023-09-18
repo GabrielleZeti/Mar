@@ -1,0 +1,43 @@
+<HTML>
+   <HEAD>
+      <TITLE>Flor</TITLE>
+   </HEAD>
+   <BODY>
+      
+      import turtle as t
+
+# Configuración inicial
+t.speed(0)
+t.bgcolor("white")
+
+# Función para dibujar un pétalo
+def dibujar_petalo():
+    t.color("yellow")
+    t.begin_fill()
+    t.circle(100, 60)
+    t.left(120)
+    t.circle(100, 60)
+    t.end_fill()
+
+# Dibujar el centro de la flor
+t.penup()
+t.goto(0, -100)
+t.pendown()
+t.color("yellow")
+t.begin_fill()
+t.circle(100)
+t.end_fill()
+
+# Dibujar los pétalos
+for _ in range(6):
+    dibujar_petalo()
+    t.left(60)
+
+# Ocultar la tortuga
+t.hideturtle()
+
+# Cerrar la ventana al hacer clic
+t.exitonclick()
+      
+   </BODY>
+</HTML>
